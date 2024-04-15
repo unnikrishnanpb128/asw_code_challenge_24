@@ -8,6 +8,10 @@ typedef enum {
     STATUS_ERROR
 } status_t;
 
+status_t i2c_init();
+
+status_t i2c_deinit();
+
 status_t i2c_read(
     uint8_t bus_address,
     uint8_t register_address,

@@ -3,6 +3,20 @@
 #include <stdint.h>
 #include <stdio.h>
 
+status_t i2c_init()
+{
+    // port: platform code
+
+    return STATUS_OK;
+}
+
+status_t i2c_deinit()
+{
+    // port: platform code
+
+    return STATUS_OK;
+}
+
 status_t i2c_read(
     uint8_t bus_address,
     uint8_t register_address,
@@ -36,7 +50,7 @@ status_t i2c_write(
         register_address);
 
     for (size_t i = 0; i < length; ++i) {
-        printf("%p", buffer);
+        printf("%X", buffer[i]);
     }
     printf("\n");
     return STATUS_OK;
